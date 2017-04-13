@@ -4,4 +4,8 @@ This will implament a crapy version of skype that will send and display video to
 A couple different compression algorithuims will be used to reduced network resoucres.
 These will be compared to at the end and presented on.
 
+run with:
+      ./videoTest.py <local ip address of peer>
+
+
 
