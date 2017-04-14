@@ -41,7 +41,6 @@ def setUpServer(ip,port):
 	s.bind((ip, port))        # Bind to the port
 	s.listen(1)                 # Now wait for client connection.
 	c, addr = s.accept()
-	print 'accepted'
 	return c
 
 def setUpClient(ip, port):
@@ -86,7 +85,11 @@ def captureThread(ip, port):
 
 def main():
 	serverIP = socket.gethostbyname(socket.gethostname())
-	clientIP = sys.argv[1]
+	if len(sys.argv) == 1 :
+		clientIP = serverIP
+	else:
+		clientIP = sys.argv[1]
+
 	port = 5002
 	
 	t1 = Thread(target=captureThread, args=(serverIP, port))
