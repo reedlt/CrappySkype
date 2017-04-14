@@ -5,7 +5,8 @@ A couple different compression algorithuims will be used to reduced network reso
 These will be compared to at the end and presented on.
 
 run with:
-      ./videoTest.py <local ip address of peer>
+      ./videoTest.py [local ip address of peer] for connecting to a peer
+   or ./videoTest.py for a local loop back
 
 This utilizes openCV 3 and is organized in two threads: the video recorder, and the video displayer.
 Each thread starts life by listening to a socket (port 5002) or connecting to one. 
